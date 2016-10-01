@@ -1,0 +1,25 @@
+print('Responda as perguntas apenas com SIM ou NAO')
+
+
+for i in range(10):
+    contagem_sim = 0
+    contagem_nao = 0
+    respotas = [input('Telefonou para a vitima? '), input('Esteve no local do crime? '),
+                 input('Mora perto da vitima? '),
+                 input('Devia para a vitima? '), input('Ja trabalhou com a vitima? ')]
+
+    for resposta in respotas:
+        if resposta.upper() == 'SIM':
+            contagem_sim = contagem_sim + 1
+        else:
+            contagem_nao = contagem_nao + 1
+
+    if cont_sim == 5:
+        print('Consideramos o entrevistado como: Assassino')
+        
+    elif contagem_sim > 2 and contagem_sim <= 4:
+       print('Consideramos o entrevistado como: Cumplice')
+    elif contagem_sim == 2:
+       print('Consideramos o entrevistado como: Suspeito')
+    else:
+        print('Consideramos o entrevistado como: Inocente')
